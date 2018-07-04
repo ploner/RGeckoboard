@@ -1,0 +1,11 @@
+importFrom("grDevices", "jpeg", "png", "dev.off")
+
+export(
+  geckoCreateAccount,
+  geckoDatasetCreate,
+  geckoDatasetRemove,
+  geckoDatasetReplace,
+  geckoImagePrepare,
+  geckoImageSave,
+  geckoCustomWidgetUpdate
+)

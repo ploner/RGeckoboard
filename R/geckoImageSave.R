@@ -1,0 +1,5 @@
+geckoImageSave <- function
+(
+) {
+  dev.off()
+}
