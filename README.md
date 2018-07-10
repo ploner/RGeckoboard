@@ -1,3 +1,5 @@
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/RGeckoboard)](https://cran.r-project.org/package=RGeckoboard)
+
 ## RGeckoboard - Geckoboard API client for R
 
 The package RGeckoboard makes it easy to feed Geckoboard Dashboards with data and images from R.
@@ -74,13 +76,19 @@ To remove an existing dataset simply call:
 
 #### Upload an Image to Geckoboard
 
-The function `geckoImagePrepare` makes it easy to specify the right resolution of the rendered picture: 
+The functions provided within this package make it easy to specify the right resolution of a picture to be 
+rendered on a Geckoboard dashboard. To generate an image optimized for retina display and with a 
+size of 2x2 simply use `geckoImagePrepare`:
 
 ``` r 
 > geckoImagePrepare("folder/filename.jpg", size = "2x2", retina=TRUE, adjustTitleRow=FALSE)
 > plot(100+cumsum(rnorm(50)), type="l", col="red", lwd=3, ylab="Stock Price")
 > geckoImageSave()
 ```
+
+The parameter `adjustTitleRow` should be used if the user adds a title row within Geckoboard, hence lowering the
+actual height of the image. The persisted JPG image must be moved to a cloud storage as described in
+https://support.geckoboard.com/hc/en-us/articles/203676478-Using-the-image-widget.
 
 #### Create a Bar Chart using the CustomWidget API
 
