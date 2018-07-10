@@ -22,10 +22,9 @@ geckoDatasetCreate <- function(
   body = jsonlite::toJSON(data, auto_unbox=TRUE)
   
   ## Create data set.
-  require(httr)
-  res = PUT(
+  res = httr::PUT(
     url=paste0("https://api.geckoboard.com/datasets/", dataset),
-    authenticate(apiKey, ""),
+    httr::authenticate(apiKey, ""),
     encode="json",
     body=body
   )

@@ -11,7 +11,7 @@
 The DESCRIPTION file:
 \packageDESCRIPTION{RGeckoboard}
 \packageIndices{RGeckoboard}
-The package provides access to the Geckoboard API.
+The package provides easy access to the Geckoboard API from R.
 }
 
 \author{
@@ -19,7 +19,7 @@ The package provides access to the Geckoboard API.
 Maintainer: \packageMaintainer{RGeckoboard}
 }
 
-\references{\url{https://developer-beta.geckoboard.com}}
+\references{\url{https://www.geckoboard.com}}
 
 \keyword{package}
 \keyword{Geckoboard}

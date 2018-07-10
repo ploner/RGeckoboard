@@ -5,7 +5,8 @@
 
 \description{Update the data of a Custom Widget by Push methodology. If not existing, create a new one. If x axis values are of class \code{Date}, x axis format is auto-adjusted therefore.}
 
-\usage{geckoCustomWidgetUpdate(df, apiKey, dataset="dummy.by_day", types)}
+\usage{geckoCustomWidgetUpdate(widgetType="barchart", data, apiKey, widgetKey, 
+verbose=FALSE)}
 
 \arguments{
   \item{widgetType}{Chart Type, see https://developer-custom.geckoboard.com/#custom-widget-types.}

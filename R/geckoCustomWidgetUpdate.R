@@ -57,8 +57,7 @@ geckoCustomWidgetUpdate <- function(
   body = jsonlite::toJSON(body, auto_unbox=TRUE)
   
   ## Create data set.
-  require(httr)
-  res = POST(
+  res = httr::POST(
     url=paste0("https://push.geckoboard.com/v1/send/", widgetKey),
     encode="json", 
     body=body

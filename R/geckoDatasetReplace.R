@@ -29,10 +29,9 @@ geckoDatasetReplace <- function(
   body = paste('{ "data" : ', body, ' }')
   
   ## Replace data set.
-  require(httr)
-  res = PUT(
+  res = httr::PUT(
     url=paste0("https://api.geckoboard.com/datasets/", dataset, "/data"),
-    authenticate(apiKey, ""),
+    httr::authenticate(apiKey, ""),
     encode="json",
     body=body
   )

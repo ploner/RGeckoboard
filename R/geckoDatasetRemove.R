@@ -5,10 +5,9 @@ geckoDatasetRemove <- function(
   verbose=FALSE
 ) {
   ## Remove data set.
-  require(httr)
-  res = DELETE(
+  res = httr::DELETE(
     url=paste0("https://api.geckoboard.com/datasets/", dataset),
-    authenticate(apiKey, ""),
+    httr::authenticate(apiKey, ""),
     encode="json"
   )
   if(verbose)
