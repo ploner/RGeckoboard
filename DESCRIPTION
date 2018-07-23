@@ -14,4 +14,4 @@ Depends: R (>= 3.2.0)
 Description: Provides an interface to Geckoboard.
 Imports: jsonlite, httr
 License: MIT + file LICENSE
-URL: https://github.com/ploner/RGeckoboard, https://www.geckoboard.com
+URL: https://github.com/ploner/RGeckoboard
