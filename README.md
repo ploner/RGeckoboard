@@ -15,9 +15,18 @@ https://support.geckoboard.com/hc/en-us/articles/203676478#using_the_image_widge
 
 ### Installation
 
+The package can be installed directly from github (latest version):
+
 ``` r
 require(devtools)
 devtools::install_bitbucket("ploner/RGeckoboard")
+require(RGeckoboard)
+```
+
+or from the package repository CRAN (latest submitted version):
+
+``` r
+install.packages("RGeckoboard")
 require(RGeckoboard)
 ```
 
