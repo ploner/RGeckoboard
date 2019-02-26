@@ -101,7 +101,7 @@ https://support.geckoboard.com/hc/en-us/articles/203676478-Using-the-image-widge
 
 #### Create a Bar Chart using the CustomWidget API
 
-Using `geckoCustomWidgetUpdate` data from a `data.frame` is easily pushed to Geckoboard and visualized 
+Using `geckoCustomWidgetUpdate`, data from a `data.frame` can be pushed easily to Geckoboard and visualized 
 by a Bar Chart. First create a new CustomWidget in Geckoboard, then copy the `widget key` to paste it into R. 
 
 ``` r 
@@ -109,6 +109,7 @@ by a Bar Chart. First create a new CustomWidget in Geckoboard, then copy the `wi
 > widgetKey = "..."
 > df = data.frame(date=as.Date("2018-01-01", "2018-02-01"), val1=1:2, val2=rnorm(2))
 > geckoCustomWidgetUpdate(
+  widgetType="barchart",
   data=list(
     y=df[, c("val1", "val2")], 
     x=df$date
@@ -117,5 +118,32 @@ by a Bar Chart. First create a new CustomWidget in Geckoboard, then copy the `wi
   widgetKey=widgetKey
 )
 ```
+
+#### Create a Monitoring Widget using the CustomWidget API
+
+Using `geckoCustomWidgetUpdate`, it is easy to create or update a Geckoboard Monitoring widget. First create a new CustomWidget of type *Monitoring* in Geckoboard, then copy the `widget key` to paste it into R. 
+
+``` r 
+## Fill in here the widget API key found when creating a new CustomWidget on www.geckoboard.com.
+> widgetKey = "..."
+> df = data.frame(date=as.Date("2018-01-01", "2018-02-01"), val1=1:2, val2=rnorm(2))
+> geckoCustomWidgetUpdate(
+  widgetType="monitoring",
+  data=list(
+    status="up",
+    downTime="11 days ago"
+  ), 
+  apiKey=account$apiKey, 
+  widgetKey=widgetKey
+)
+```
+
+#### Push directly data to the PUSH API of Geckoboard
+
+``` r 
+> data=list(...)
+> geckoPushData(data, apiKey=account$apiKey, widgetKey=widgetKey)
+```
+
 
 
