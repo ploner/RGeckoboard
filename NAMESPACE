@@ -7,5 +7,6 @@ export(
   geckoDatasetReplace,
   geckoImagePrepare,
   geckoImageSave,
-  geckoCustomWidgetUpdate
+  geckoCustomWidgetUpdate,
+  geckoPushData
 )

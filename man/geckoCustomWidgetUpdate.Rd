@@ -10,20 +10,27 @@ verbose=FALSE)}
 
 \arguments{
   \item{widgetType}{Chart Type, see https://developer-custom.geckoboard.com/#custom-widget-types.}
-  \item{data}{For "barchart" a list with the following elements (mostly optional): 
+  \item{data}{
+    For "barchart" a list with the following elements (mostly optional): 
     \describe{
-     \item{y}{data.frame w/ 1 column per series. N rows.}
-     \item{y.format}{Optional. "decimal", "percent" or "currency". Defaults to "decimal".}
-     \item{y.unit}{Optional. For currencied "GBP", "USD" or "EUR".}
-     \item{x}{Optional. Vector of length N with bar labels.}
-   }
-   For "geckometer" a list with the following elements:
-   \describe{
-     \item{current}{Current value. Numeric.}
-     \item{min}{Min (left) value. Numeric.}
-     \item{max}{Max (right) value. Numeric.}
-     \item{format}{Optional. "percent" or "currency". Defaults is "decimal".}
-     \item{unit}{Optional. For currencied "GBP", "USD" or "EUR".}
+      \item{y}{data.frame w/ 1 column per series. N rows.}
+      \item{y.format}{Optional. "decimal", "percent" or "currency". Defaults to "decimal".}
+      \item{y.unit}{Optional. For currencied "GBP", "USD" or "EUR".}
+      \item{x}{Optional. Vector of length N with bar labels.}
+    }
+    For "geckometer" a list with the following elements:
+    \describe{
+      \item{current}{Current value. Numeric.}
+      \item{min}{Min (left) value. Numeric.}
+      \item{max}{Max (right) value. Numeric.}
+      \item{format}{Optional. "percent" or "currency". Defaults is "decimal".}
+      \item{unit}{Optional. For currencied "GBP", "USD" or "EUR".}
+    }
+    For "monitoring" a list with the following elements:
+    \describe{
+      \item{status}{"up", "down" or "unreported".}
+      \item{downTime}{Optional and of type character.}
+      \item{responseTime}{Optional and of type character.}
     }
   }
   \item{apiKey}{API key.}

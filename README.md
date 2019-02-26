@@ -47,7 +47,7 @@ the Geckoboard Project into an R object of class `geckoboardAccount`. The next e
 ``` r
 ## Fill in here the API key found on 
 ## www.geckoboard.com -> 'top-right' -> Account -> API Key. 
-> account = geckoboardCreateAccount("ProjectName", key="553c55...")
+> account = geckoCreateAccount("ProjectName", key="553c55...")
 > class(account)
 [1] "geckoboardAccount"
 ```
