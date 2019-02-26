@@ -2,12 +2,12 @@
 
 ## RGeckoboard - Geckoboard API client for R
 
-The package RGeckoboard makes it easy to feed Geckoboard Dashboards with data and images from R.
-There are three main functionalities:
+The package RGeckoboard makes it easy to feed Geckoboard Dashboards with data and images from R. The following functionality is integrated into the package:
 
-- access to the Dataset API (create, delete, update a dataset)
-- create an image optimized for Geckoboard usage
-- push R data to the Custom Widget API (for now Barchart only)
+- Access to the Dataset API (create, delete, update a dataset).
+- Push R data to the Custom Widget API (e.g. for Barchart, Geckometer, Monitoring widget).
+- Push R data directly to the Geckoboard PUSH API.
+- Create an image optimized for Geckoboard usage.
 
 An image created with this package must be uploaded to an URL accessible from Geckoboard. This could be a location
 on a cloud service (e.g. Dropbox, Google Drive) or a custom host. For more information see 
